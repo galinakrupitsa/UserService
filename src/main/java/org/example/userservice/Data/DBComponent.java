@@ -1,4 +1,4 @@
-package org.example.userservice;
+package org.example.userservice.Data;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.jdbc.core.JdbcTemplate;
