@@ -12,11 +12,11 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/api/v1")
 public class UserController {
     public final UserRepository userRepository;
+    private final UserService userService;
 
-
-    public UserController(UserRepository userRepository) {
+    public UserController(UserRepository userRepository, UserService userService) {
         this.userRepository = userRepository;
-
+        this.userService = userService;
     }
 
     @GetMapping("/user/{userId}")
@@ -25,7 +25,7 @@ public class UserController {
     }
     @PostMapping ("/user/create")
     public Users createUser(@RequestBody Users user) {
-        return userRepository.create(user.firstName, user.secondName);
+        return userService.createUsers(user);
     }
 
 
