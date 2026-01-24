@@ -1,11 +1,7 @@
 package org.example.userservice.Controller;
-
-import org.apache.catalina.User;
-import org.example.userservice.DTO.UserResponse;
 import org.example.userservice.Model.Users;
 import org.example.userservice.Repository.UserRepository;
 import org.example.userservice.Service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
